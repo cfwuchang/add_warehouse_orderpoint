@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- add button in SaleOrder -->
+    <record id="view_warehouse_orderpoint_tree_editable_inheritd" model="ir.ui.view">
+        <field name="name">stock.warehouse.orderpoint.tree.editable</field>
+        <field name="model">stock.warehouse.orderpoint</field>
+        <field name="inherit_id" ref ="stock.view_warehouse_orderpoint_tree_editable"/>	
+        <field name="arch" type="xml">
+            <xpath expr ="//field[@name='active']" position="before">
+                <header >
+                    <button name="create_batch" type="object" string="点击查询项目号" class="btn-primary"/>
+                </header>
+                <field name="x_project" force_save="1"/>
+                <field name="x_name" force_save="1"/>
+                <field name="x_remark" force_save="1"/>
+                <field name="x_date" force_save="1"/>
+            </xpath>
+            <!-- <xpath expr ="//field[@name='active']" position="before">
+                <field name="x_project" force_save="1"/>
+                <field name="x_name" force_save="1"/>
+                <field name="x_remark" force_save="1"/>
+                <field name="x_date" force_save="1"/>
+            </xpath> -->
+            
+        </field>   
+    </record>
+
+
+
+    
+</odoo>
