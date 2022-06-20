@@ -27,7 +27,7 @@ class List(models.Model):
                             dd.append(i.raw_material_production_id.product_id.name)
                             ee.append(i.x_remark)
                             ff.append(i.create_uid.name)
-                            ss.append( datetime.datetime.strftime(i.date, "%Y-%m-%d"))
+                            ss.append( datetime.datetime.strftime(i.add_warehouse_orderpoint, "%Y-%m-%d"))
                 obj.x_project=dd
                 obj.x_remark=ee
                 obj.x_name=ff
