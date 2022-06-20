@@ -33,7 +33,7 @@ class Orderpoint(models.Model):
                         dd.append(i.raw_material_production_id.product_id.name)
                         ee.append(i.x_remark)
                         ff.append(i.create_uid.name)
-                        ss.append( datetime.strftime(i.date, "%Y-%m-%d"))
+                        ss.append( datetime.strftime(i.date_move_list, "%Y-%m-%d"))
             obj.x_project=dd
             obj.x_remark=ee
             obj.x_name=ff
